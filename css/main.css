@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url("../assets/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Set the size of an app window */
+.container {
+	width: 650px;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	border-radius: 10px;
+}
+
+/* OSX-like buttons styling */
+.buttons {
+	height: 40px;
+	padding-left: 15px;
+}
+
+button {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	padding: 0;
+	border: none;
+	margin: 16px 2px 16px 2px;
+}
+
+.exit-button {
+	background-color: #ff594f;
+}
+
+.maximize-button {
+	background-color: #ffbc1b;
+}
+
+.minimize-button {
+	background-color: #00cd46;
+}
+
+/* Place .content next to .sidebar*/
+.sidebar, 
+.content {
+	float: left;
+}
+
+/* Sidebar with navigation styling */
+.sidebar {
+	width: 150px;
+	height: 100%;
+	background-color: rgba(16,16,34,0.9);
+}
+
+.sidebar nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar nav ul li {
+	list-style-type: none;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 15px;
+	position: relative;
+}
+
+.sidebar nav ul li:hover {
+	cursor: pointer;
+	background-color: #292a48;
+}
+
+.sidebar nav ul li a {
+	width: 100%;
+	padding-left: 10px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 14px;
+	text-align: left;
+	letter-spacing: 0.1px;
+}
+
+.sidebar nav ul li img {
+	width: 16px;
+	height: auto;
+}
+
+.sidebar nav ul li span {
+	position: absolute;
+	right: 0;
+	margin-right: 15px;
+	color: #8a8995;
+	font-weight: 14px;
+	font-family: sans-serif;
+}
+
+/* Main frame styling */
+.content {
+	width: calc(100% - 150px);	
+	background-color: #f6f6f6;
+	height: 100%;
+}
+
+.content .inner {
+	height: 100%;
+	overflow-y: scroll;
+	padding: 0 20px 0 15px;
+}
+
+.content ol, .content ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.content ul li {
+	padding: 0 45px 0 12px;
+	border: 1px solid #e0e0e0;
+	height: 40px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: block;
+	line-height: 38px;
+	font-size: 15px;
+	position: relative;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.content ol > li {
+	font-size: 12px;
+	line-height: 27px;
+	letter-spacing: 0.1px;
+	text-align: left;
+	color: #8a8995;
+	margin: 0;
+}
+
+.content ul li {
+	color: #080606;
+}
+
+.content label {
+	word-break: break-word;
+}
+
+/* Stars that can be checked when the issue is closed */
+.star {
+	visibility: hidden;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.star::before {
+	content: "\2605";
+	visibility: visible;
+	position: absolute;
+	line-height: 16px;
+	right: 0;
+	top: 50%;
+	margin-right: 12px;
+	color: #21233d;
+	transform: translateY(-50%);
+}
+
+.star:checked::before {
+	content: "\2606";
+	position: absolute;
+	color: #e0e0e0;
+}
