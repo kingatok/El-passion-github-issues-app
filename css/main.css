@@ -72,31 +72,32 @@ button {
 
 .sidebar nav ul li {
 	list-style-type: none;
-	display: block;
 	height: 50px;
 	line-height: 50px;
-	padding-left: 15px;
 	position: relative;
 }
 
-.sidebar nav ul li:hover {
+.sidebar nav ul li:hover, .sidebar nav ul li a:focus {
 	cursor: pointer;
 	background-color: #292a48;
 }
 
 .sidebar nav ul li a {
 	width: 100%;
-	padding-left: 10px;
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 14px;
 	text-align: left;
 	letter-spacing: 0.1px;
+	line-height: 50px;
+	display: block;
+	padding-left: 15px;
 }
 
 .sidebar nav ul li img {
 	width: 16px;
 	height: auto;
+	margin-right: 10px;
 }
 
 .sidebar nav ul li span {
@@ -139,6 +140,7 @@ button {
 	position: relative;
 	margin-bottom: 5px;
 	overflow: hidden;
+	color: #080606;
 }
 
 .content ol > li {
@@ -148,10 +150,6 @@ button {
 	text-align: left;
 	color: #8a8995;
 	margin: 0;
-}
-
-.content ul li {
-	color: #080606;
 }
 
 .content label {
